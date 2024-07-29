@@ -82,27 +82,3 @@ location / {
   RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 </IfModule>
 ```
-
-### Docker部署方法
-
-首先需要安装Docker，然后执行以下命令拉取镜像并启动（启动后监听8081端口）：
-
-```
-docker run --name dnsmgr -dit -p 8081:80 -v /var/dnsmgr:/app/www netcccyun/dnsmgr
-```
-
-访问并安装好后如果容灾切换未自动启动，重启容器即可：
-
-```
-docker restart dnsmgr
-```
-
-### 版权信息
-
-版权所有Copyright © 2023~2024 by 消失的彩虹海(https://blog.cccyun.cn)
-
-### 其他推荐
-
-- [彩虹云主机 - 免备案CDN/虚拟主机](https://www.cccyun.net/)
-- [小白云高防云服务器](https://www.xiaobaiyun.cn/aff/GMLPMFOV)
-
